@@ -21,17 +21,16 @@ function login() {
     }
     if (username === storedUser.username && password === storedUser.password) {
         localStorage.setItem("isLoggedIn", "true");
-        window.location.href = "dashboard.html"
+        window.location.href = "dashboard.html";
 
     }
     else {
         alert("invalid credentials");
     }
 }
-
 if (window.location.pathname.includes("dashboard")) {
     if (localStorage.getItem("isLoggedIn") !== "true") {
-        window.location.href = "index.html"
+        window.location.href = "index.html";
     }
 }
 function logout() {
