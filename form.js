@@ -1,16 +1,43 @@
-const Loginbutton = document.querySelector('.button-style');
-const emailInput = document.getElementById('email');
-const passInput = document.getElementById('pass');
-Loginbutton.addEventListener('click', function (event) {
-    event.preventDefault();
-    const email = emailInput.value;
-    const pass = passInput.value;
-    if (email === '' || pass === '') {
-        alert('Please fill in all fields.');
+function register() {
+    const username = document.getElementById("email").value;
+    const password = document.getElementById("pass").value;
+
+    if (!username || !password) {
+        alert("All fields required");
         return;
     }
-    localStorage.setItem('userEmail', email);
-    localStorage.setItem('userPass', pass);
-    alert('Login successful data saved to local storage.');
-    window.location.href = 'dashboard.html';
-});
+    const user = { username, password };
+    localStorage.setItem("user", JSON.stringify(user));
+    alert("Regestrtion sucesfully");
+    window.location.href = "index.html";
+}
+function login() {
+    const username = document.getElementById("email").value;
+    const password = document.getElementById("pass").value;
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    if (!storedUser) {
+        alert("No user found");
+        return;
+    }
+    if (username === storedUser.username && password === storedUser.password) {
+        localStorage.setItem("isLoggedIn", "true");
+        window.location.href = "dashboard.html"
+
+    }
+    else {
+        alert("invalid credentials");
+    }
+}
+
+if (window.location.pathname.includes("dashboard")) {
+    if (localStorage.getItem("isLoggedIn") !== "true") {
+        window.location.href = "index.html"
+    }
+}
+function logout() {
+    localStorage.removeItem("isLoggedIn");
+    window.location.href = "index.html";
+}
+
+
+

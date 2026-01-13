@@ -1,26 +1,29 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-.form{
+
+.form {
     display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-   height: 100vh;
-  width: auto;
-  margin: 0;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    height: 100vh;
+    width: auto;
+    margin: 0;
 }
- .form form{
-   background: rgba(255, 255, 255, 0.825);
-box-shadow: 0 8px 32px rgb(255, 255, 255);
-     height: 600px;
+
+.form form {
+    background: rgba(255, 255, 255, 0.825);
+    box-shadow: 0 8px 32px rgb(255, 255, 255);
+    height: 600px;
     width: 1000px;
     border-radius: 20px;
     display: flex;
@@ -28,46 +31,49 @@ box-shadow: 0 8px 32px rgb(255, 255, 255);
     justify-content: center;
     align-items: center;
     gap: 5px;
-   
- }
- .input-info{
+
+}
+
+.input-info {
     display: flex;
     flex-direction: column;
     gap: 10px;
     border: none;
- }
- .input-info input{
+}
+
+.input-info input {
     border: none;
     padding: 10px;
     background-color: transparent;
     border-bottom: 2px solid black;
     outline: none;
 
-   
- }
 
- 
- .footer{
- display: flex;
- flex-direction: row;
- align-items: center;
-gap: 4px;
-
-  
 }
-.footer .button-style{
-    width: 70px;
+
+
+.footer {
     display: flex;
-    justify-content: center;
-    height: auto;
-    border: none;
-    border-radius: 7px;
-    cursor: pointer;
-    background-color:white;
-    text-decoration: none;
+    flex-direction: row;
+    align-items: center;
     gap: 2px;
 
+
 }
-.button-style:hover{
+.Register-butn{
+    background-color: white;
+    width: 120x;
+    height: auto;
+    border: none;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    text-decoration: none;
+    color: black;
+}
+.Register-butn:hover{
       box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+.footer p{
+    color: blue;
 }
